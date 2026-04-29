@@ -219,6 +219,103 @@ h2 { font-size: 3rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02e
 }
 #backdrop.is-visible { opacity: 1; pointer-events: auto; }
 
+/* ==============================================================
+   SEÇÃO SOBRE (LAYOUT COM CARDS INFERIORES)
+============================================================== */
+.about-hero {
+    padding: 100px 24px;
+}
+
+.about-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-grey);
+    margin-bottom: 48px;
+    font-weight: 500;
+}
+
+.about-paragraphs p {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.about-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 56px 0 32px 0;
+}
+
+.about-label-bottom {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-grey);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.about-cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-card {
+    background: #f9fafb;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.card-top {
+    font-size: 0.85rem;
+    color: var(--text-grey);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.card-bottom {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* Responsividade do Sobre */
+@media (max-width: 768px) {
+    .about-cards-row {
+        grid-template-columns: 1fr;
+    }
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .about-paragraphs p {
+        font-size: 1.05rem;
+    }
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 992px) {
     .hero { grid-template-columns: 1fr; text-align: center; gap: 40px; }
